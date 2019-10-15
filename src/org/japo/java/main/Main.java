@@ -15,6 +15,8 @@
  */
 package org.japo.java.main;
 
+import java.util.Date;
+
 /**
  *
  * @author mon-mode
@@ -22,12 +24,18 @@ package org.japo.java.main;
 public class Main {
 
     public static void main(String[] args) {
-        /*Instancia del objeto, aunque ejercicio funcionaría con esta línea
-        System.out.println("Tiempo UNIX (s)....... : " + System.currentTimeMillis());  */
-        long fromEpoch;
-
+        /*Instancia de los objetos/variables, aunque ejercicio funcionaría con esta línea
+        System.out.println("Tiempo UNIX (s)....... : " + System.currentTimeMillis());  
+        Lo acompañamos con el uso de la clase Date y Calendar */
+        long fromEpoch, timeinMilli;
+        Date date = new Date();
+        
         fromEpoch = System.currentTimeMillis();
-
-        System.out.printf("Tiempo UNIX........... : %d en segundos %n", fromEpoch / 1000);
+        System.out.printf("Tiempo UNIX.(1)........... : %d en segundos %n", fromEpoch / 1000);
+        
+        //Usamos la clase Date aquí
+        timeinMilli = date.getTime();
+        System.out.println("Tiempo UNIX. (Date)....... : " + timeinMilli);
+        
     }
 }
