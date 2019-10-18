@@ -36,6 +36,9 @@ public class Main {
         //Usamos la clase Date aquí
         timeinMilli = date.getTime();
         System.out.println("Tiempo UNIX. (Date)....... : " + timeinMilli);
+        System.out.println(date);
+        
+
         
     }
 }
